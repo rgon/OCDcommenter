@@ -70,13 +70,13 @@ OCDFort
 Smaller code dividers.
 ```
 ############################################################
-Or in Javascript:
+Or in Javascript/C:
 ////////////////////////////////////////////////////////////
 ```
 Produced by:
 ```
 # ocdfort
-For JS, use:
+For JS or C, use:
 // ocdfort
 ```
 
