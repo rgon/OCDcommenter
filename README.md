@@ -5,6 +5,20 @@ A perfect soultion for coders whose OCD has them worried about their code's comm
 OCDCommenter automatically spaces all your inline comments to occupy a certain column, making them look better and without having you waste time doing it.
 Because many are the times when one notices that this block's comments aren't indented to the same level as the previous one's.
 
+This is what you write:
+```
+from __future__ import print_function, division    # Only needed for Python 2
+import sys  # argv
+import math   # ceil() and floor()
+```
+And this is what you get:
+```
+from __future__ import print_function, division                                # Only needed for Python 2
+import sys                                                                     # argv
+import math                                                                    # ceil() and floor()
+```
+Just running the script. It looks even better with longer code. Rejoice.
+
 The program detects if it's a comment line, if the comment is the last element of the line, if it's inside quotes, if it's an escaped character... Smart enough so you needn't worry about it.
 
 And, BTW, it changes all tabs to 4 spaces.
