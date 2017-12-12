@@ -58,9 +58,10 @@ langByExtension = {
     "m": "objective-c",
     "c#": "cs"
 }
-disableKeywords = [slcommentchar + " OCD Disabled", slcommentchar + " OCD Enabled"]
-castlekeyWords = [slcommentchar + " ocdcastle", slcommentchar + " !ocdcastle"]
-fortKeyword = slcommentchar + " ocdfort"
+disableKeywords = ""
+castlekeyWords = ""
+fortKeyword = ""
+wallkeyphrase = ""
 
 paddedCastles = True
 reduceCastleSizeWithIndentation = True
@@ -116,13 +117,15 @@ def guessLang(fname):
 
 def updateSLchar(_slcommentchar):
     global slcommentchar
-    global disableKeywords, castlekeyWords, fortKeyword
+    global disableKeywords, castlekeyWords, fortKeyword, wallkeyphrase
 
     slcommentchar = _slcommentchar
 
     disableKeywords = [slcommentchar + " OCD Disabled", slcommentchar + " OCD Enabled"]
     castlekeyWords = [slcommentchar + " ocdcastle", slcommentchar + " !ocdcastle"]
     fortKeyword = slcommentchar + " ocdfort"
+    wallkeyphrase = slcommentchar + " ocdwall "
+
 
 # Ready for parsing non-pythonic languages.
 def analyzeCommentLine(line, startPos):
@@ -218,6 +221,27 @@ def fortBuilder(line):
     line = line.replace(fortKeyword, slcommentchar*int(castleSize/len(slcommentchar)))
     return line
 
+def wallBuilder(line):
+    strippedLine = line.strip()[len(wallkeyphrase):]
+    indentation = getIndentation(line)
+
+    strippedLine = " " + strippedLine + " "
+
+    actualCastleSize = castleSize
+    if (reduceCastleSizeWithIndentation):
+        actualCastleSize = castleSize - len(indentation)
+
+    charactersToAdd = actualCastleSize - len(strippedLine)
+    
+    if(charactersToAdd <= 8):
+        charactersToAdd = 8
+    charactersToAdd /= 2
+
+    charactersToAdd /= len(slcommentchar)
+
+    line = indentation + slcommentchar*int(math.ceil(charactersToAdd)) + strippedLine + slcommentchar*int(math.floor(charactersToAdd)) + "\n"
+    return line
+
 ############################################################
 #                                                          #
 #                Main program functionality.               #
@@ -231,7 +255,7 @@ def ocdFile(_infile, _outfile):
     '''
     try:
         _outfile = open(_outfile, 'w')
-    except:
+    except:wallBuilder
         pass
     '''
     
@@ -264,6 +288,8 @@ def ocdFile(_infile, _outfile):
                     
                         if(strippedLine == fortKeyword):
                             line = fortBuilder(line)                           # Redefined
+                        elif(strippedLine[:len(wallkeyphrase)] == wallkeyphrase):
+                            line = wallBuilder(line)
 
                     if(strippedLine == disableKeywords[0]):
                         tempdisabled = True

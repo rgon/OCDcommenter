@@ -13,6 +13,8 @@ these single-line comments should be pretty nice, actually.
 
 ############################################################
 
+###################### This is a wall. #####################
+
 It even patches broken castles, like this:
 
 ############################################################
@@ -28,6 +30,8 @@ And correctly spaces and sizes indented castles.
     #                  Higher but smaller.                 #
     #                                                      #
     ########################################################
+
+        ################# walls also scale. ################
 
 And, BTW, it changes tabs to 4 spaces.
 
@@ -46,6 +50,8 @@ these single-line comments should be pretty nice, actually.
 
 # ocdfort
 
+# ocdwall This is a wall.
+
 It even patches broken castles, like this:
 
 # ocdcastle
@@ -57,6 +63,8 @@ And correctly spaces and sizes indented castles.
     # ocdcastle
     # Higher but smaller.
     # !ocdcastle
+    
+        # ocdwall walls also scale.
 
 And, BTW, it changes tabs to 4 spaces.
 
