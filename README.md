@@ -1,7 +1,5 @@
 # OCDCommenter
 
-----
-
 A perfect soultion for coders whose OCD has them worried about their code's comment aesthetics. No more time wasting, I've already done that for you.
 
 OCDCommenter automatically spaces all your inline comments to occupy a certain column, making them look better and without having you waste time doing it.
@@ -12,18 +10,16 @@ The program detects if it's a comment line, if the comment is the last element o
 And, BTW, it changes all tabs to 4 spaces.
 
 ## Usage:
----
-Just run OCDCommenter/__init__.py and drag your script to it (or append it as the script parameter). It'll do the hard work for you.
+Just run `OCDCommenter/__init__.py` and drag your script to it (or append it as the script parameter). It'll do the hard work for you.
 Your original file is backed up as *filename*.bak, so you can always revert one level.
 You may include this as a libary on your program, provided that you respect the license (read LICENSE.md).
 
 ## Supported languages:
----
 Works with python and javaScript files. Detects them based on their file extension. Asks the user when the extension is unknown.
 
 ## Tools:
 ### OCDcastle
-_
+
 Easily build good title blocks to divide sections of your code.
 ```
 ############################################################
@@ -80,6 +76,7 @@ This program is independant of your editor, so there's no need to worry about co
 ## License
 This program is distributed under the GNU GPL v3 license.
 
-----
+
+
 
 Want a new feature? Contact me or perform a pull request. Anything that makes our lives simpler is welcome.
