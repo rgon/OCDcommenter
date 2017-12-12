@@ -17,3 +17,4 @@ Version 1.1.5: added js test files, bad python file, proper python file.
 Version 1.2.0: fixed "building a castle using the foundation of another", aka removing remnant comment characters from the lines of a castle.
 Versoin 1.2.5: added a precarious CLI.
 Version 1.3.0: added python2 support. Had to modify a couple of things.
+Version 1.3.5: fixed the tab to spaces script. If run at this same program, the "tab" space in the replace() clase would get replaced by 4 spaces.
