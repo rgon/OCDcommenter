@@ -22,7 +22,7 @@ You may include this as a libary on your program, provided that you respect the 
 Works with python and javaScript files. Detects them based on their file extension. Asks the user when the extension is unknown.
 
 ## Tools:
-###OCDcastle
+### OCDcastle
 _
 Easily build good title blocks to divide sections of your code.
 ```
@@ -68,9 +68,11 @@ For JS, use:
 ```
 
 Disabling the comment spacing within a block.
+```
 # OCD Disabled
 # Any content here won't be parsed. # So this string won't be spaced.
 # OCD Enabled
+```
 
 ## Editor-agnostic.
 This program is independant of your editor, so there's no need to worry about compatibility issues.
