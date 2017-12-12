@@ -18,3 +18,4 @@ Version 1.2.0: fixed "building a castle using the foundation of another", aka re
 Versoin 1.2.5: added a precarious CLI.
 Version 1.3.0: added python2 support. Had to modify a couple of things.
 Version 1.3.5: fixed the tab to spaces script. If run at this same program, the "tab" space in the replace() clase would get replaced by 4 spaces.
+Version 1.4: added "ocdwalls", single line division especially designed for use within classes and the such.
