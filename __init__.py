@@ -75,7 +75,7 @@ commentStartColumn -= 1                                                        #
 ############################################################
 
 # Ready for parsing non-pythonic languages.
-def stripLeft(string):                                                         # AKA Get indentation.
+def getIndentation(string):                                                         # AKA Get indentation.
     firstActualChar = 0
     for character in range(1, len(string)):
         if(string[:character].strip() != ""):                                  # If all the following chars are spaces/padding, that's the last char.
@@ -168,7 +168,7 @@ def castleBuilder(line):
     global castleSize
 
     strippedLine = line.strip()
-    indentation = stripLeft(line)
+    indentation = getIndentation(line)
 
     actualCastleSize = castleSize
     if (reduceCastleSizeWithIndentation):
@@ -241,7 +241,7 @@ def ocdFile(_infile, _outfile):
         buildcastle = False
 
         for line in f.readlines():
-            line = line.replace("    ", "    ")                                # Tab to spaces.
+            line = line.replace("\t", " "*4)                                   # Tab to spaces.
 
             strippedLine = line.strip()                                        # Remove indentation.
             
@@ -288,8 +288,8 @@ def checkSyntax(_file):                                                        #
         lastOcurrence = None
 
         for i, line in enumerate(f.readlines()):
-            line = line.replace("    ", "    ")                                # Tab to spaces.
             strippedLine = line.strip()                                        # Remove indentation.
+            line = strippedLine + getIndentation(line).replace("    ", "    ")                                # Tab to spaces.
             
             if(len(strippedLine)):                                             # The line is empty. Avoid errors.
                 if(strippedLine[0:len(slcommentchar)] == slcommentchar):       # If it isn't the first character in the line, aka the line isnt't a comment.
