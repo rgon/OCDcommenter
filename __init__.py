@@ -75,7 +75,7 @@ commentStartColumn -= 1                                                        #
 ############################################################
 
 # Ready for parsing non-pythonic languages.
-def getIndentation(string):                                                         # AKA Get indentation.
+def getIndentation(string):                                                    # AKA Get indentation.
     firstActualChar = 0
     for character in range(1, len(string)):
         if(string[:character].strip() != ""):                                  # If all the following chars are spaces/padding, that's the last char.
@@ -289,7 +289,7 @@ def checkSyntax(_file):                                                        #
 
         for i, line in enumerate(f.readlines()):
             strippedLine = line.strip()                                        # Remove indentation.
-            line = strippedLine + getIndentation(line).replace("    ", "    ")                                # Tab to spaces.
+            line = strippedLine + getIndentation(line).replace("\t", "    ")   # Tab to spaces.
             
             if(len(strippedLine)):                                             # The line is empty. Avoid errors.
                 if(strippedLine[0:len(slcommentchar)] == slcommentchar):       # If it isn't the first character in the line, aka the line isnt't a comment.
