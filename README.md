@@ -17,9 +17,9 @@ from __future__ import print_function, division                                #
 import sys                                                                     # argv
 import math                                                                    # ceil() and floor()
 ```
-Just running the script. It looks even better with longer code. Rejoice.
+Much cleaner, just running the script. Rejoice.
 
-The program detects if it's a comment line, if the comment is the last element of the line, if it's inside quotes, if it's an escaped character... Smart enough so you needn't worry about it.
+Smart enough so you needn't worry about it. The program detects if it's a comment line, if the comment is the last element of the line, if it's inside quotes, if it's an escaped character, if the line's longer than the comment column... 
 
 And, BTW, it changes all tabs to 4 spaces.
 
@@ -29,8 +29,9 @@ Your original file is backed up as *filename*.bak, so you can always revert one 
 You may include this as a libary on your program, provided that you respect the license (read LICENSE.md).
 
 ## Supported languages:
-Works with python and javaScript files. Detects them based on their file extension. Asks the user when the extension is unknown.
-
+The program detects the language based on the file's extension. If it's unknow, it prompts the user for a choice.
+⋅⋅* Python (2/3) [*.py]
+⋅⋅* JavaScript [*.js]
 ## Tools:
 ### OCDcastle
 
