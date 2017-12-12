@@ -32,6 +32,8 @@ You may include this as a libary on your program, provided that you respect the 
 The program detects the language based on the file's extension. If it's unknow, it prompts the user for a choice.
 * Python (2/3) [*.py]
 * JavaScript [*.js]
+* C (C99/C11 or later, not compatible with ANSI-C) [.c]
+* C++/C#/Objective-C [.cpp, .cs, .m]
 ## Tools:
 ### OCDcastle
 

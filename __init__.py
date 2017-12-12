@@ -43,11 +43,20 @@ castleSize = 60
 slcommentchar = "//"                                                           # The character that denotes a single line comment.
 slcharByLang = {
     "python": "#",
-    "javascript": "//"
+    "javascript": "//",
+    "c": "//",
+    "cpp": "//",
+    "c++": "//",
+    "objective-c": "//",
+    "c#": "//"
 }
 langByExtension = {
     "py": "python",
-    "js": "javascript"
+    "js": "javascript",
+    "c": "c",
+    "cpp": "cpp",
+    "m": "objective-c",
+    "c#": "cs"
 }
 disableKeywords = [slcommentchar + " OCD Disabled", slcommentchar + " OCD Enabled"]
 castlekeyWords = [slcommentchar + " ocdcastle", slcommentchar + " !ocdcastle"]
