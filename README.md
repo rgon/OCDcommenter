@@ -1,8 +1,8 @@
-# OCDCommenter
+# OCDcommenter
 
 A perfect soultion for coders whose OCD has them worried about their code's comment aesthetics. No more time wasting, I've already done that for you.
 
-OCDCommenter automatically spaces all your inline comments to occupy a certain column, making them look better and without having you waste time doing it.
+OCDcommenter automatically spaces all your inline comments to occupy a certain column, making them look better and without having you waste time doing it.
 Because many are the times when one notices that this block's comments aren't indented to the same level as the previous one's.
 
 This is what you write:
@@ -24,9 +24,9 @@ Smart enough so you needn't worry about it. The program detects if it's a commen
 And, BTW, it changes all tabs to 4 spaces.
 
 ## Usage:
-Just run `OCDCommenter/__init__.py` and drag your script to it (or append it as the script parameter). It'll do the hard work for you.
-Your original file is backed up as *filename*.bak, so you can always revert one level.
+Just run `OCDcommenter/__init__.py` and drag your script to it (or append it as the script parameter). It'll do the hard work for you.
 You may include this as a libary on your program, provided that you respect the license (read LICENSE.md).
+_Your original file is backed up as *filename*.bak, so you can always revert one level._
 
 ## Supported languages:
 The program detects the language based on the file's extension. If it's unknow, it prompts the user for a choice.
@@ -68,6 +68,7 @@ Produced by writing:
 // !ocdcastle
 ```
 
+
 ### OCDfort
 Smaller code dividers.
 ```
@@ -81,6 +82,7 @@ Produced by:
 For JS or C, use:
 // ocdfort
 ```
+
 
 ### OCDwall
 Useful for differentiating between groups of elements/functions inside a class.
@@ -96,6 +98,7 @@ For JS or C, use:
 // ocdwall This is a wall.
 ```
 
+
 ### Disabling the parser in a section of code.
 OCDcommenter allows disabling the parser in certain sections if wanted.
 ```
@@ -104,6 +107,7 @@ OCDcommenter allows disabling the parser in certain sections if wanted.
 # Neither will this be processed.
 # OCD Enabled
 ```
+
 
 ## Editor-agnostic.
 This program is independant of your editor, so there's no need to worry about compatibility issues.
