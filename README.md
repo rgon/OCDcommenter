@@ -34,9 +34,11 @@ The program detects the language based on the file's extension. If it's unknow, 
 * JavaScript [*.js]
 * C (C99/C11 or later, not compatible with ANSI-C) [.c]
 * C++/C#/Objective-C [.cpp, .cs, .m]
-## Tools:
-### OCDcastle
 
+
+## Tools:
+
+### OCDcastle
 Easily build good title blocks to divide sections of your code.
 ```
 ############################################################
@@ -66,7 +68,7 @@ Produced by writing:
 // !ocdcastle
 ```
 
-OCDFort
+### OCDfort
 Smaller code dividers.
 ```
 ############################################################
@@ -80,10 +82,26 @@ For JS or C, use:
 // ocdfort
 ```
 
-Disabling the comment spacing within a block.
+### OCDwall
+Useful for differentiating between groups of elements/functions inside a class.
+```
+###################### This is a wall. #####################
+
+# ocdwall This is a wall.
+```
+Produced by: `
+```
+# ocdwall This is a wall.
+For JS or C, use:
+// ocdwall This is a wall.
+```
+
+### Disabling the parser in a section of code.
+OCDcommenter allows disabling the parser in certain sections if wanted.
 ```
 # OCD Disabled
 # Any content here won't be parsed. # So this string won't be spaced.
+# Neither will this be processed.
 # OCD Enabled
 ```
 
@@ -93,7 +111,8 @@ This program is independant of your editor, so there's no need to worry about co
 ## License
 This program is distributed under the GNU GPL v3 license.
 
-
+## More info and help
+Check out the files in [/Tests](../Tests).
 
 
 Want a new feature? Contact me or perform a pull request. Anything that makes our lives simpler is welcome.
