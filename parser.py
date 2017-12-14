@@ -381,7 +381,7 @@ def processFile(fname):
     guessLang(fname)
 
     checkSyntax(fname)
-    backupFileName = fname + ".bak"
+    backupFileName = "." + fname + ".bak"
 
     print("Backing up original file.")
     shutil.copy(fname, backupFileName)

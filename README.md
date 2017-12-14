@@ -26,7 +26,7 @@ And, BTW, it changes all tabs to 4 spaces.
 ## Usage:
 Just run `OCDcommenter/parser.py` and drag your script to it (or append it as the script parameter). It'll do the hard work for you.
 You may include this as a libary on your program, provided that you respect the license (read LICENSE.md).
-_Your original file is backed up as *filename*.bak, so you can always revert one level._
+_Your original file is backed up as *.filename*.bak, so you can always revert one level. A dot is prepended so they are hidden in linux development environments, not to bloat your file tree._
 
 ## Supported languages:
 The program detects the language based on the file's extension. If it's unknow, it prompts the user for a choice.
