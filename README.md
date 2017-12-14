@@ -24,7 +24,7 @@ Smart enough so you needn't worry about it. The program detects if it's a commen
 And, BTW, it changes all tabs to 4 spaces.
 
 ## Usage:
-Just run `OCDcommenter/__init__.py` and drag your script to it (or append it as the script parameter). It'll do the hard work for you.
+Just run `OCDcommenter/parser.py` and drag your script to it (or append it as the script parameter). It'll do the hard work for you.
 You may include this as a libary on your program, provided that you respect the license (read LICENSE.md).
 _Your original file is backed up as *filename*.bak, so you can always revert one level._
 
