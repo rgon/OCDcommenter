@@ -79,10 +79,10 @@ Useful for differentiating between groups of elements/functions inside a class.
 ```
 Produced by:
 ```
-# ocdfort This is a wall.
+# ocdfort This is a fort.
 
 For JS or C:
-// ocdfort This is a wall.
+// ocdfort This is a fort.
 ```
 
 
