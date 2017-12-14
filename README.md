@@ -69,7 +69,24 @@ Produced by writing:
 ```
 The custom syntax is checked every time the program is run, and if errors are detected (unclosed ocdcastle tags, etc), nothing is performed.
 
+
 ### OCDfort
+Useful for differentiating between groups of elements/functions inside a class.
+```
+###################### This is a fort. #####################
+
+////////////////////// This is a fort. //////////////////////
+```
+Produced by:
+```
+# ocdfort This is a wall.
+
+For JS or C:
+// ocdfort This is a wall.
+```
+
+
+### OCDwall
 Smaller code dividers.
 ```
 ############################################################
@@ -78,25 +95,9 @@ Or in Javascript/C:
 ```
 Produced by:
 ```
-# ocdfort
+# ocdwall
 For JS or C, use:
-// ocdfort
-```
-
-
-### OCDwall
-Useful for differentiating between groups of elements/functions inside a class.
-```
-###################### This is a wall. #####################
-
-////////////////////// This is a wall. //////////////////////
-```
-Produced by:
-```
-# ocdwall This is a wall.
-
-For JS or C:
-// ocdwall This is a wall.
+// ocdwall
 ```
 
 
