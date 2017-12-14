@@ -11,6 +11,8 @@ pseudocode coder                                                               /
 
 ////////////////////////////////////////////////////////////
 
+//////////////////////// I'm a fort. //////////////////////
+
 Heeey!!
 
 The following code will not be processed. Copy the following above and process this script to check the results.
@@ -25,7 +27,10 @@ pseudocode coder  // Hello
 // I wanna build a castle outta wood.
 // !ocdcastle
 
-// ocdfort
+// ocdwall
+
+// ocdfort I'm a fort.
 
 Heeey!!
+
 // OCD Enabled

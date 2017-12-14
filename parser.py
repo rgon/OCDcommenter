@@ -60,8 +60,8 @@ langByExtension = {
 }
 disableKeywords = ""
 castlekeyWords = ""
-fortKeyword = ""
-wallkeyphrase = ""
+wallphrase = ""
+fortphrase = ""
 
 paddedCastles = True
 reduceCastleSizeWithIndentation = True
@@ -97,7 +97,8 @@ def guessLang(fname):
     fname = fname.split(".")
     fname = fname[len(fname) -1]
 
-    print("File extension:", fname)
+    print("File extension: '{}'".format(fname))
+
     lang = None
     if(fname in langByExtension):
         lang = langByExtension[fname]
@@ -106,7 +107,7 @@ def guessLang(fname):
         lang = input("Language unknown. Choose one of the following:").lower()
         print(slcharByLang.keys())
     
-    print("Processing for language", lang)
+    print("Processing for language '{}'".format(lang))
     updateSLchar(slcharByLang[lang])
 
 ############################################################
@@ -117,14 +118,14 @@ def guessLang(fname):
 
 def updateSLchar(_slcommentchar):
     global slcommentchar
-    global disableKeywords, castlekeyWords, fortKeyword, wallkeyphrase
+    global disableKeywords, castlekeyWords, wallphrase, fortphrase
 
     slcommentchar = _slcommentchar
 
     disableKeywords = [slcommentchar + " OCD Disabled", slcommentchar + " OCD Enabled"]
     castlekeyWords = [slcommentchar + " ocdcastle", slcommentchar + " !ocdcastle"]
-    fortKeyword = slcommentchar + " ocdfort"
-    wallkeyphrase = slcommentchar + " ocdwall "
+    wallphrase = slcommentchar + " ocdwall"
+    fortphrase = slcommentchar + " ocdfort "
 
 
 # Ready for parsing non-pythonic languages.
@@ -217,12 +218,12 @@ def castleBuilder(line):
         return line
 
 # Ready for parsing non-pythonic languages.
-def fortBuilder(line):
-    line = line.replace(fortKeyword, slcommentchar*int(castleSize/len(slcommentchar)))
+def wallBuilder(line):
+    line = line.replace(wallphrase, slcommentchar*int(castleSize/len(slcommentchar)))
     return line
 
-def wallBuilder(line):
-    strippedLine = line.strip()[len(wallkeyphrase):]
+def fortBuilder(line):
+    strippedLine = line.strip()[len(fortphrase):]
     indentation = getIndentation(line)
 
     strippedLine = " " + strippedLine + " "
@@ -255,7 +256,7 @@ def ocdFile(_infile, _outfile):
     '''
     try:
         _outfile = open(_outfile, 'w')
-    except:wallBuilder
+    except:
         pass
     '''
     
@@ -286,10 +287,10 @@ def ocdFile(_infile, _outfile):
                             if(strippedLine == castlekeyWords[1]):
                                 buildcastle = False
                     
-                        if(strippedLine == fortKeyword):
-                            line = fortBuilder(line)                           # Redefined
-                        elif(strippedLine[:len(wallkeyphrase)] == wallkeyphrase):
-                            line = wallBuilder(line)
+                        if(strippedLine == wallphrase):
+                            line = wallBuilder(line)                           # Redefined
+                        elif(strippedLine[:len(fortphrase)] == fortphrase):
+                            line = fortBuilder(line)
 
                     if(strippedLine == disableKeywords[0]):
                         tempdisabled = True
@@ -339,6 +340,12 @@ def checkSyntax(_file):                                                        #
                             print("Last ocdcastle tag found @ line {}".format(lastOcurrence))
                             print("\nQuitting right now.")
                             quit()
+                elif(strippedLine[0:len(wallphrase)] == wallphrase):
+                    if(len(strippedLine[len(wallphrase):].strip()) > 0):
+                        print("ERROR @ line {}: There's some content after an ocdwall tag. This text will removed. NOT CONTINUING.".format(i+1))
+                        print("Line content: {}".format(line.strip()))
+                        print("\nQuitting right now.")
+                        quit()
         
         if(buildingcastle):
             print("ERROR: File contains an unclosed castle tag.")

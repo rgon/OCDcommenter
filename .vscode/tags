@@ -1,0 +1,52 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+__init__.py	../__init__.py	1;"	kind:file	line:1
+__init__.py	../__pycache__/__init__.py	1;"	kind:file	line:1
+analyzeCommentLine	../__pycache__/__init__.py	/^def analyzeCommentLine(line, startPos):$/;"	kind:function	line:32
+analyzeCommentLine	../parser.py	/^def analyzeCommentLine(line, startPos):$/;"	kind:function	line:131
+arguments	../parser.py	/^    arguments = sys.argv$/;"	kind:variable	line:375
+backupFileName	../__pycache__/__init__.py	/^    backupFileName = fname + ".bak"$/;"	kind:variable	line:174
+badformat.py	../Tests/badformat.py	1;"	kind:file	line:1
+castleBuilder	../__pycache__/__init__.py	/^def castleBuilder(line):$/;"	kind:function	line:80
+castleBuilder	../parser.py	/^def castleBuilder(line):$/;"	kind:function	line:170
+castleSize	../__pycache__/__init__.py	/^castleSize = 60$/;"	kind:variable	line:77
+castleSize	../parser.py	/^castleSize = 60$/;"	kind:variable	line:41
+castlekeyWords	../__pycache__/__init__.py	/^castlekeyWords = ["# ocdcastle", "# \/ocdcastle"]$/;"	kind:variable	line:75
+castlekeyWords	../parser.py	/^castlekeyWords = ""$/;"	kind:variable	line:62
+checkSyntax	../parser.py	/^def checkSyntax(_file):                                                        # Before letting castleBuilder break a file, check if there are any syntax errors and prevent that.$/;"	kind:function	line:309
+commentStartColumn	../__pycache__/__init__.py	/^commentStartColumn = 80                                                        # Ideally a multiple of 4.$/;"	kind:variable	line:7
+commentStartColumn	../parser.py	/^commentStartColumn = 80                                                        # Ideally a multiple of 4.$/;"	kind:variable	line:40
+disableKeywords	../parser.py	/^disableKeywords = ""$/;"	kind:variable	line:61
+fname	../__pycache__/__init__.py	/^    fname = input("Drop your file here -> ").strip().replace("'", "").replace('"', "")$/;"	kind:variable	line:168
+fname	../parser.py	/^        fname = arguments[1]$/;"	kind:variable	line:386
+fname	../parser.py	/^        fname = input("Drop your file here -> ").strip().replace("'", "").replace('"', "")$/;"	kind:variable	line:388
+fortBuilder	../__pycache__/__init__.py	/^def fortBuilder(line):$/;"	kind:function	line:106
+fortBuilder	../parser.py	/^def fortBuilder(line):$/;"	kind:function	line:220
+fortKeyword	../__pycache__/__init__.py	/^fortKeyword = "# ocdfort"$/;"	kind:variable	line:76
+fortKeyword	../parser.py	/^fortKeyword = ""$/;"	kind:variable	line:63
+getIndentation	../parser.py	/^def getIndentation(string):                                                    # AKA Get indentation.$/;"	kind:function	line:79
+getModdedLine	../__pycache__/__init__.py	/^def getModdedLine(line):$/;"	kind:function	line:54
+getModdedLine	../parser.py	/^def getModdedLine(line):$/;"	kind:function	line:147
+guessLang	../parser.py	/^def guessLang(fname):$/;"	kind:function	line:96
+langByExtension	../parser.py	/^langByExtension = {$/;"	kind:variable	line:53
+minimumCastleSize	../parser.py	/^minimumCastleSize = 40$/;"	kind:variable	line:68
+ocdFile	../__pycache__/__init__.py	/^def ocdFile(_infile, _outfile):$/;"	kind:function	line:112
+ocdFile	../parser.py	/^def ocdFile(_infile, _outfile):$/;"	kind:function	line:252
+paddedCastles	../__pycache__/__init__.py	/^paddedCastles = True$/;"	kind:variable	line:78
+paddedCastles	../parser.py	/^paddedCastles = True$/;"	kind:variable	line:66
+parser.py	../parser.py	1;"	kind:file	line:1
+processFile	../parser.py	/^def processFile(fname):$/;"	kind:function	line:360
+pseudoPython.py	../Tests/pseudoPython.py	1;"	kind:file	line:1
+reduceCastleSizeWithIndentation	../parser.py	/^reduceCastleSizeWithIndentation = True$/;"	kind:variable	line:67
+slcharByLang	../parser.py	/^slcharByLang = {$/;"	kind:variable	line:44
+slcommentchar	../parser.py	/^slcommentchar = "\/\/"                                                           # The character that denotes a single line comment.$/;"	kind:variable	line:43
+stripLeft	../__pycache__/__init__.py	/^def stripLeft(string):                                                         # AKA Get indentation.$/;"	kind:function	line:16
+stripRight	../__pycache__/__init__.py	/^def stripRight(string):$/;"	kind:function	line:24
+stripRight	../parser.py	/^def stripRight(string):$/;"	kind:function	line:88
+updateSLchar	../parser.py	/^def updateSLchar(_slcommentchar):$/;"	kind:function	line:118
+wallBuilder	../parser.py	/^def wallBuilder(line):$/;"	kind:function	line:224
+wallkeyphrase	../parser.py	/^wallkeyphrase = ""$/;"	kind:variable	line:64

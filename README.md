@@ -69,7 +69,7 @@ Produced by writing:
 ```
 
 
-### OCDfort
+### OCDwall
 Smaller code dividers.
 ```
 ############################################################
@@ -78,13 +78,13 @@ Or in Javascript/C:
 ```
 Produced by:
 ```
-# ocdfort
+# ocdwall
 For JS or C, use:
-// ocdfort
+// ocdwall
 ```
 
 
-### OCDwall
+### OCDfort
 Useful for differentiating between groups of elements/functions inside a class.
 ```
 ###################### This is a wall. #####################
@@ -93,9 +93,9 @@ Useful for differentiating between groups of elements/functions inside a class.
 ```
 Produced by: `
 ```
-# ocdwall This is a wall.
+# ocdfort This is a wall.
 For JS or C, use:
-// ocdwall This is a wall.
+// ocdfort This is a wall.
 ```
 
 

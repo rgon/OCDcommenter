@@ -13,7 +13,7 @@ these single-line comments should be pretty nice, actually.
 
 ############################################################
 
-###################### This is a wall. #####################
+###################### This is a fort. #####################
 
 It even patches broken castles, like this:
 
@@ -30,8 +30,8 @@ And correctly spaces and sizes indented castles.
     #                  Higher but smaller.                 #
     #                                                      #
     ########################################################
-
-        ################# walls also scale. ################
+    
+        ################# forts also scale. ################
 
 And, BTW, it changes tabs to 4 spaces.
 
@@ -48,9 +48,9 @@ these single-line comments should be pretty nice, actually.
 
 # however, this is a normal comment, and there's no need # to space this.
 
-# ocdfort
+# ocdwall
 
-# ocdwall This is a wall.
+# ocdfort This is a fort.
 
 It even patches broken castles, like this:
 
@@ -64,7 +64,7 @@ And correctly spaces and sizes indented castles.
     # Higher but smaller.
     # !ocdcastle
     
-        # ocdwall walls also scale.
+        # ocdfort forts also scale.
 
 And, BTW, it changes tabs to 4 spaces.
 
