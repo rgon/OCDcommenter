@@ -11,7 +11,7 @@ from __future__ import print_function, division    # Only needed for Python 2
 import sys  # argv
 import math   # ceil() and floor()
 ```
-And this is what you get:
+And this is what you get. Aligned in-line comments:
 ```
 from __future__ import print_function, division                                # Only needed for Python 2
 import sys                                                                     # argv
@@ -32,8 +32,8 @@ _Your original file is backed up as *filename*.bak, so you can always revert one
 The program detects the language based on the file's extension. If it's unknow, it prompts the user for a choice.
 * Python (2/3) [*.py]
 * JavaScript [*.js]
-* C (C99/C11 or later, not compatible with ANSI-C) [.c]
-* C++/C#/Objective-C [.cpp, .cs, .m]
+* C (C99/C11 or later, not compatible with ANSI-C as it doesn't support in-line commenting) [*.c]
+* C++/C#/Objective-C [*.cpp, .cs, .m]
 
 
 ## Tools:
@@ -91,7 +91,7 @@ Useful for differentiating between groups of elements/functions inside a class.
 
 # ocdwall This is a wall.
 ```
-Produced by: `
+Produced by:
 ```
 # ocdwall This is a wall.
 For JS or C, use:
@@ -110,7 +110,7 @@ OCDcommenter allows disabling the parser in certain sections if wanted.
 
 
 ## Editor-agnostic.
-This program is independant of your editor, so there's no need to worry about compatibility issues.
+This program is independant of your editor, so there's no need to worry about compatibility issues. Just run it once in a while.
 
 ## License
 This program is distributed under the GNU GPL v3 license.
