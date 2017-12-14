@@ -67,7 +67,7 @@ Produced by writing:
 // I wanna build a castle outta wood.
 // !ocdcastle
 ```
-
+The custom syntax is checked every time the program is run, and if errors are detected (unclosed ocdcastle tags, etc), nothing is performed.
 
 ### OCDfort
 Smaller code dividers.
