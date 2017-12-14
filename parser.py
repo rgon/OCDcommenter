@@ -219,7 +219,16 @@ def castleBuilder(line):
 
 # Ready for parsing non-pythonic languages.
 def wallBuilder(line):
-    line = line.replace(wallphrase, slcommentchar*int(castleSize/len(slcommentchar)))
+    indentation = getIndentation(line)
+    strippedLine = line.strip()
+    
+    actualCastleSize = castleSize
+    if (reduceCastleSizeWithIndentation):
+        actualCastleSize = castleSize - len(indentation)
+        if(actualCastleSize < minimumCastleSize):
+            actualCastleSize = minimumCastleSize
+    
+    line = indentation + strippedLine.replace(wallphrase, slcommentchar*int(actualCastleSize/len(slcommentchar))) + "\n"
     return line
 
 def fortBuilder(line):
@@ -340,7 +349,7 @@ def checkSyntax(_file):                                                        #
                             print("Last ocdcastle tag found @ line {}".format(lastOcurrence))
                             print("\nQuitting right now.")
                             quit()
-                elif(strippedLine[0:len(wallphrase)] == wallphrase):
+                elif(strippedLine[len(slcommentchar):len(slcommentchar)+len(wallphrase)] == wallphrase):
                     if(len(strippedLine[len(wallphrase):].strip()) > 0):
                         print("ERROR @ line {}: There's some content after an ocdwall tag. This text will removed. NOT CONTINUING.".format(i+1))
                         print("Line content: {}".format(line.strip()))

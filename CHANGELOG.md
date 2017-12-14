@@ -21,3 +21,4 @@ Version 1.3.5: fixed the tab to spaces script. If run at this same program, the 
 Version 1.4: added "ocdforts", single line division especially designed for use within classes and the such.
 Version 1.5: renamed "ocdwalls" to "ocdforts", as it's waaay more intuitive. (Also replaced in this changelog and README).
 Version 1.6: added "wall" syntax checking, as any content in a line starting with an "ocdwall" keyword will have it's content erased. If there's any content, thrown an error and exit.
+Version 1.7: by default, now walls are also reduced with indentation (up to a minimum size defined by minimumCastleSize). Looks much better.
