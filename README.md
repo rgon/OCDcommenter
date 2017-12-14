@@ -89,12 +89,13 @@ Useful for differentiating between groups of elements/functions inside a class.
 ```
 ###################### This is a wall. #####################
 
-# ocdwall This is a wall.
+////////////////////// This is a wall. //////////////////////
 ```
 Produced by:
 ```
 # ocdwall This is a wall.
-For JS or C, use:
+
+For JS or C:
 // ocdwall This is a wall.
 ```
 
