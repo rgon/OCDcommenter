@@ -33,7 +33,7 @@ The program detects the language based on the file's extension. If it's unknow, 
 * Python (2/3) [*.py]
 * JavaScript [*.js]
 * C (C99/C11 or later, not compatible with ANSI-C as it doesn't support in-line commenting) [*.c]
-* C++/C#/Objective-C [*.cpp, .cs, .m]
+* C++/C#/Objective-C [*.cpp, *.cs, *.m]
 
 
 ## Tools:
