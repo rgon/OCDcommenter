@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # Division required to perform ceil() and floor() with precision, and not just clip/round the values, which might lead to uneven line lengths.
 from __future__ import print_function, division                                # Only needed for Python 2
 
-import sys                                                                     # argv
+import os, sys                                                                 # argv
 import math                                                                    # ceil() and floor()
 import shutil                                                                  # copy(i, o): preserve the backup file's mode and ownership.
 
@@ -381,7 +381,7 @@ def processFile(fname):
     guessLang(fname)
 
     checkSyntax(fname)
-    backupFileName = "." + fname + ".bak"
+    backupFileName = os.path.join( os.path.dirname(fname), "." + os.path.basename(fname) + ".bak")
 
     print("Backing up original file.")
     shutil.copy(fname, backupFileName)
