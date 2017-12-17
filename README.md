@@ -121,4 +121,4 @@ This program is distributed under the GNU GPL v3 license.
 Check out the files in [/Tests](https://github.com/rgon/OCDcommenter/tree/master/Tests).
 
 
-Want a new feature? Contact me or perform a pull request. Anything that makes our lives simpler is welcome.
+Want a new feature? Contact me or perform a pull request, add your changes and fork!. Anything that makes our lives simpler is welcome.
