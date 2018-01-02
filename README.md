@@ -1,5 +1,7 @@
 # OCDcommenter
 
+<img src="https://user-images.githubusercontent.com/25673263/34492078-57b11e14-efe6-11e7-991a-2430e720add6.png" align="right" />
+
 A perfect soultion for coders whose OCD has them worried about their code's comment aesthetics. No more time wasting, I've already done that for you.
 
 OCDcommenter automatically spaces all your inline comments to occupy a certain column, making them look better and without having you waste time doing it.
